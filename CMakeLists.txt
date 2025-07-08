@@ -5,10 +5,9 @@ project(cppinit
 		LANGUAGES CXX
 )
 
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS On)
 
-set(CPPINIT-SRC
-	src/main.cpp
-)
+file(GLOB_RECURSE sources src/*.cpp src/*.h)
 
-add_executable(cppinit ${CPPINIT-SRC})
+add_executable(cppinit ${sources})
